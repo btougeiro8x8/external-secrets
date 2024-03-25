@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  external-secrets:
+  - apiVersion: v2
+    created: "2024-03-25T15:32:47.324604549Z"
+    description: A Helm chart to deploy External Secrets and Secret Store.
+    digest: 5fb8b52e78ae285cb14d805cb38fef38dc04e6ea7d3f9d2f0233408bca0e868c
+    name: external-secrets
+    type: application
+    urls:
+    - https://github.com/btougeiro8x8/external-secrets/releases/download/external-secrets-0.1.0/external-secrets-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-03-25T15:32:47.324615249Z"
