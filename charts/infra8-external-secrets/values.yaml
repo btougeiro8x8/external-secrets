@@ -1,0 +1,208 @@
+externalSecret:
+  enabled: false
+  namespace:
+  secrets: []
+
+secretStore:
+  enabled: false
+
+  name:
+  labels: {}
+  annotations: {}
+  namespace:
+
+  # Used to select the correct ESO controller (think: ingress.ingressClassName)
+  # The ESO controller is instantiated with a specific controller name and filters ES based on this property
+  controller:
+
+  # Used to configure the provider. Only one provider may be set
+  # provider field contains the configuration to access the provider
+  # which contains the secret exactly one provider must be configured.
+  provider: {}
+  # Available Providers:
+  # Reference: https://external-secrets.io/latest/api/spec/#external-secrets.io/v1beta1.SecretStoreProvider
+  # aws
+  # AWS configures this store to sync secrets using AWS Secret Manager provider
+
+  # azurekv
+  # AzureKV configures this store to sync secrets using Azure Key Vault provider
+
+  # akeyless
+  # Akeyless configures this store to sync secrets using Akeyless Vault provider
+
+  # vault
+  # Vault configures this store to sync secrets using Hashi provider
+
+  # gcpsm
+  # GCPSM configures this store to sync secrets using Google Cloud Platform Secret Manager provider
+
+  # oracle
+  # Oracle configures this store to sync secrets using Oracle Vault provider
+
+  # ibm
+  # IBM configures this store to sync secrets using IBM Cloud provider
+
+  # yandexcertificatemanager
+  # YandexCertificateManager configures this store to sync secrets using Yandex Certificate Manager provider
+
+  # yandexlockbox
+  # YandexLockbox configures this store to sync secrets using Yandex Lockbox provider
+
+  # gitlab
+  # GitLab configures this store to sync secrets using GitLab Variables provider
+
+  # alibaba
+  # Alibaba configures this store to sync secrets using Alibaba Cloud provider
+
+  # onepassword
+  # OnePassword configures this store to sync secrets using the 1Password Cloud provider
+
+  # webhook
+  # Webhook configures this store to sync secrets using a generic templated webhook
+
+  # kubernetes
+  # Kubernetes configures this store to sync secrets using a Kubernetes cluster provider
+
+  # fake
+  # Fake configures a store with static key/value pairs
+
+  # senhasegura
+  # Senhasegura configures this store to sync secrets using senhasegura provider
+
+  # scaleway
+  # Scaleway
+
+  # doppler
+  # Doppler configures this store to sync secrets using the Doppler provider
+
+  # keepersecurity
+  # KeeperSecurity configures this store to sync secrets using the KeeperSecurity provider
+
+  # conjur
+  # Conjur configures this store to sync secrets using conjur provider
+
+  # delinea
+  # Delinea DevOps Secrets Vault https://docs.delinea.com/online-help/products/devops-secrets-vault/current
+
+  # chef
+  # Chef configures this store to sync secrets with chef server
+
+  # pulumi
+  # Pulumi configures this store to sync secrets using the Pulumi provider
+
+  # Used to configure http retries if failed
+  # You can specify retry settings for the http connection
+  # these fields allow you to set a maxRetries before failure, and
+  # an interval between the retries.
+  # Current supported providers: AWS, Hashicorp Vault, IBM
+  retrySettings:
+    # maxRetries:
+    # retryInterval:
+  # Used to configure store refresh interval in seconds. Empty or 0 will default to the controller config.
+  refreshInterval:
+
+clusterExternalSecret:
+  enabled: false
+  namespace:
+  secrets: []
+
+clusterSecretStore:
+  enabled: false
+
+  name:
+  labels: {}
+  annotations: {}
+  namespace:
+
+  # Used to select the correct ESO controller (think: ingress.ingressClassName)
+  # The ESO controller is instantiated with a specific controller name and filters ES based on this property
+  controller:
+
+  # Used to configure the provider. Only one provider may be set
+  # provider field contains the configuration to access the provider
+  # which contains the secret exactly one provider must be configured.
+  provider: {}
+  # Available Providers:
+  # Reference: https://external-secrets.io/latest/api/spec/#external-secrets.io/v1beta1.SecretStoreProvider
+  # aws
+  # AWS configures this store to sync secrets using AWS Secret Manager provider
+
+  # azurekv
+  # AzureKV configures this store to sync secrets using Azure Key Vault provider
+
+  # akeyless
+  # Akeyless configures this store to sync secrets using Akeyless Vault provider
+
+  # vault
+  # Vault configures this store to sync secrets using Hashi provider
+
+  # gcpsm
+  # GCPSM configures this store to sync secrets using Google Cloud Platform Secret Manager provider
+
+  # oracle
+  # Oracle configures this store to sync secrets using Oracle Vault provider
+
+  # ibm
+  # IBM configures this store to sync secrets using IBM Cloud provider
+
+  # yandexcertificatemanager
+  # YandexCertificateManager configures this store to sync secrets using Yandex Certificate Manager provider
+
+  # yandexlockbox
+  # YandexLockbox configures this store to sync secrets using Yandex Lockbox provider
+
+  # gitlab
+  # GitLab configures this store to sync secrets using GitLab Variables provider
+
+  # alibaba
+  # Alibaba configures this store to sync secrets using Alibaba Cloud provider
+
+  # onepassword
+  # OnePassword configures this store to sync secrets using the 1Password Cloud provider
+
+  # webhook
+  # Webhook configures this store to sync secrets using a generic templated webhook
+
+  # kubernetes
+  # Kubernetes configures this store to sync secrets using a Kubernetes cluster provider
+
+  # fake
+  # Fake configures a store with static key/value pairs
+
+  # senhasegura
+  # Senhasegura configures this store to sync secrets using senhasegura provider
+
+  # scaleway
+  # Scaleway
+
+  # doppler
+  # Doppler configures this store to sync secrets using the Doppler provider
+
+  # keepersecurity
+  # KeeperSecurity configures this store to sync secrets using the KeeperSecurity provider
+
+  # conjur
+  # Conjur configures this store to sync secrets using conjur provider
+
+  # delinea
+  # Delinea DevOps Secrets Vault https://docs.delinea.com/online-help/products/devops-secrets-vault/current
+
+  # chef
+  # Chef configures this store to sync secrets with chef server
+
+  # pulumi
+  # Pulumi configures this store to sync secrets using the Pulumi provider
+
+  # Used to configure http retries if failed
+  # You can specify retry settings for the http connection
+  # these fields allow you to set a maxRetries before failure, and
+  # an interval between the retries.
+  # Current supported providers: AWS, Hashicorp Vault, IBM
+  retrySettings:
+    # maxRetries:
+    # retryInterval:
+  # Used to configure store refresh interval in seconds. Empty or 0 will default to the controller config.
+  refreshInterval:
+
+  # Used to constraint a ClusterSecretStore to specific namespaces. Relevant only to ClusterSecretStore
+  conditions: []
